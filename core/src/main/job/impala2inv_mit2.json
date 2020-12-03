@@ -1,0 +1,201 @@
+{
+  "job": {
+    "setting": {
+      "speed": {
+        "channel": 3
+      },
+      "errorLimit": {
+        "record": 0,
+        "percentage": 0.02
+      }
+    },
+    "content": [
+      {
+        "reader": {
+          "name": "impalareader",
+          "parameter": {
+            "username": "ua_scm_inv",
+            "password": "hWbjcNj7SYM7",
+            "column": [
+              "PKID",
+              "CL_ITL_ID",
+              "CL_ITL_CODE",
+              "CL_ITL_SN",
+              "CL_TT_CODE",
+              "CL_COSTCODE",
+              "CL_LE_CODE",
+              "CL_SITE_CODE",
+              "CL_DATE",
+              "CL_PERIOD",
+              "CL_TYPE",
+              "CL_DATA_SOURCE",
+              "CL_AMT",
+              "CL_ABS",
+              "CL_DRAFTED_DATETIME",
+              "CL_DRAFTED_USER_CODE",
+              "CL_DRAFTED_USER_NAME",
+              "ADDED_TIME",
+              "ADDED_BY_CODE",
+              "ADDED_BY_NAME",
+              "ADDED_BY_IP",
+              "LAST_MODIFIED_TIME",
+              "LAST_MODIFIED_BY_CODE",
+              "LAST_MODIFIED_BY_NAME",
+              "LAST_MODIFIED_BY_IP",
+              "IS_DELETE",
+              "CL_LE_NAME",
+              "CL_LE_FULLNAME",
+              "CL_SITE_NAME",
+              "CL_SITE_FULLNAME",
+              "CL_IT_CODE",
+              "CL_IT_NAME",
+              "CL_IT_DESC",
+              "CL_IT_MAT_CODE",
+              "CL_IT_MAT_NAME",
+              "CL_IT_FTY_CODE",
+              "CL_IT_FTY_NAME",
+              "CL_IT_SPEC",
+              "CL_IT_IC_CODE",
+              "CL_IT_IC_NAME",
+              "CL_METERING_MODE",
+              "CL_QTY",
+              "CL_UM",
+              "CL_A_QTY",
+              "CL_A_UM",
+              "CL_B_QTY",
+              "CL_B_UM",
+              "CL_LOC_CODE",
+              "CL_LOCG_CODE",
+              "CL_LOT",
+              "CL_TRADE_DATE",
+              "CL_DIRECTION",
+              "CL_OT_CODE",
+              "CL_OT_NAME",
+              "CL_TT_NAME",
+              "INDUSTRY_CODE",
+              "TENANT_CODE",
+              "CL_WH_CODE",
+              "CL_WH_NAME",
+              "CL_WH_FULLNAME",
+              "CL_TS_TR_CODE",
+              "CL_TS_TR_FULLNAME",
+              "CL_TS_TR_NAME",
+              "CL_GS_TR_CODE",
+              "CL_GS_TR_NAME",
+              "CL_GS_TR_FULLNAME",
+              "CL_LOC_OWNER_CODE",
+              "CL_LOC_OWNER_NAME",
+              "CL_LOC_OWNER_FULLNAME",
+              "CL_LOC_NAME",
+              "CL_LOC_FULLNAME"
+            ],
+            "connection": [
+              {
+                "table": [
+                  "SAAS_REPORT.cost_ledger"
+                ],
+                "jdbcUrl": [
+                  "jdbc:impala://10.0.44.132:21050"
+                ]
+              }
+            ]
+          }
+        },
+        "writer": {
+          "name": "mysqlwriter",
+          "parameter": {
+            "writeMode": "update",
+            "username": "ua_scm_inv",
+            "password": "hWbjcNj7SYM7",
+            "column": [
+              "CL_ID",
+              "CL_ITL_ID",
+              "CL_ITL_CODE",
+              "CL_ITL_SN",
+              "CL_TT_CODE",
+              "CL_COSTCODE",
+              "CL_LE_CODE",
+              "CL_SITE_CODE",
+              "CL_DATE",
+              "CL_PERIOD",
+              "CL_TYPE",
+              "CL_DATA_SOURCE",
+              "CL_AMT",
+              "CL_ABS",
+              "CL_DRAFTED_DATETIME",
+              "CL_DRAFTED_USER_CODE",
+              "CL_DRAFTED_USER_NAME",
+              "ADDED_TIME",
+              "ADDED_BY_CODE",
+              "ADDED_BY_NAME",
+              "ADDED_BY_IP",
+              "LAST_MODIFIED_TIME",
+              "LAST_MODIFIED_BY_CODE",
+              "LAST_MODIFIED_BY_NAME",
+              "LAST_MODIFIED_BY_IP",
+              "IS_DELETE",
+              "CL_LE_NAME",
+              "CL_LE_FULLNAME",
+              "CL_SITE_NAME",
+              "CL_SITE_FULLNAME",
+              "CL_IT_CODE",
+              "CL_IT_NAME",
+              "CL_IT_DESC",
+              "CL_IT_MAT_CODE",
+              "CL_IT_MAT_NAME",
+              "CL_IT_FTY_CODE",
+              "CL_IT_FTY_NAME",
+              "CL_IT_SPEC",
+              "CL_IT_IC_CODE",
+              "CL_IT_IC_NAME",
+              "CL_METERING_MODE",
+              "CL_QTY",
+              "CL_UM",
+              "CL_A_QTY",
+              "CL_A_UM",
+              "CL_B_QTY",
+              "CL_B_UM",
+              "CL_LOC_CODE",
+              "CL_LOCG_CODE",
+              "CL_LOT",
+              "CL_TRADE_DATE",
+              "CL_DIRECTION",
+              "CL_OT_CODE",
+              "CL_OT_NAME",
+              "CL_TT_NAME",
+              "INDUSTRY_CODE",
+              "TENANT_CODE",
+              "CL_WH_CODE",
+              "CL_WH_NAME",
+              "CL_WH_FULLNAME",
+              "CL_TS_TR_CODE",
+              "CL_TS_TR_FULLNAME",
+              "CL_TS_TR_NAME",
+              "CL_GS_TR_CODE",
+              "CL_GS_TR_NAME",
+              "CL_GS_TR_FULLNAME",
+              "CL_LOC_OWNER_CODE",
+              "CL_LOC_OWNER_NAME",
+              "CL_LOC_OWNER_FULLNAME",
+              "CL_LOC_NAME",
+              "CL_LOC_FULLNAME"
+            ],
+            "session": [
+            ],
+            "preSql": [
+              "delete from cost_ledger"
+            ],
+            "connection": [
+              {
+                "jdbcUrl": "jdbc:mysql://10.0.12.2:3306/scm_inv?useUnicode=true&characterEncoding=gbk",
+                "table": [
+                  "cost_ledger"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

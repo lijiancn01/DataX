@@ -47,12 +47,13 @@
 
         <!-- reader -->
         <module>mysqlreader</module>
-        <module>drdsreader</module>
+        <!--<module>drdsreader</module>
         <module>sqlserverreader</module>
         <module>postgresqlreader</module>
-        <module>kingbaseesreader</module>
+        <module>kingbaseesreader</module>-->
         <module>oraclereader</module>
-        <module>odpsreader</module>
+        <module>impalareader</module>
+        <!--<module>odpsreader</module>
         <module>otsreader</module>
         <module>otsstreamreader</module>
         <module>txtfilereader</module>
@@ -67,19 +68,20 @@
         <module>tsdbreader</module>
         <module>opentsdbreader</module>
         <module>cassandrareader</module>
-        <module>gdbreader</module>
+        <module>gdbreader</module>-->
 
         <!-- writer -->
         <module>mysqlwriter</module>
-        <module>drdswriter</module>
+        <!--<module>drdswriter</module>
         <module>odpswriter</module>
         <module>txtfilewriter</module>
         <module>ftpwriter</module>
         <module>hdfswriter</module>
         <module>streamwriter</module>
-        <module>otswriter</module>
+        <module>otswriter</module>-->
         <module>oraclewriter</module>
-        <module>sqlserverwriter</module>
+        <module>impalawriter</module>
+        <!--<module>sqlserverwriter</module>
         <module>postgresqlwriter</module>
         <module>kingbaseeswriter</module>
         <module>osswriter</module>
@@ -96,12 +98,12 @@
         <module>adbpgwriter</module>
         <module>gdbwriter</module>
         <module>cassandrawriter</module>
-        <module>clickhousewriter</module>
+        <module>clickhousewriter</module>-->
         <!-- common support module -->
         <module>plugin-rdbms-util</module>
         <module>plugin-unstructured-storage-util</module>
-        <module>hbase20xsqlreader</module>
-        <module>hbase20xsqlwriter</module>
+        <!--<module>hbase20xsqlreader</module>
+        <module>hbase20xsqlwriter</module>-->
         <module>kuduwriter</module>
     </modules>
 
@@ -181,7 +183,7 @@
         </dependencies>
     </dependencyManagement>
 
-    <repositories>
+    <!--<repositories>
         <repository>
             <id>central</id>
             <name>Nexus aliyun</name>
@@ -207,7 +209,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </pluginRepository>
-    </pluginRepositories>
+    </pluginRepositories>-->
 
     <build>
         <plugins>

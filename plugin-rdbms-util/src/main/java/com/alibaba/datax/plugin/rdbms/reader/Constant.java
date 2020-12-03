@@ -25,4 +25,6 @@ public final class Constant {
 
     public static String TABLE_NAME_PLACEHOLDER = "@table";
 
+    public static final int DEFAULT_FETCH_SIZE = 1000;
+
 }

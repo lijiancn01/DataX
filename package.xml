@@ -180,6 +180,13 @@
             </includes>
             <outputDirectory>datax</outputDirectory>
         </fileSet>
+        <fileSet>
+            <directory>impalareader/target/datax/</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+            <outputDirectory>datax</outputDirectory>
+        </fileSet>
 
         <!-- writer -->
         <fileSet>
@@ -373,6 +380,13 @@
         </fileSet>
         <fileSet>
             <directory>clickhousewriter/target/datax/</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+            <outputDirectory>datax</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>impalawriter/target/datax/</directory>
             <includes>
                 <include>**/*.*</include>
             </includes>

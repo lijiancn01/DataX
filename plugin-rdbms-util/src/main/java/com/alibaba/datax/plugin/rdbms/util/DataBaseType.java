@@ -20,7 +20,8 @@ public enum DataBaseType {
     DB2("db2", "com.ibm.db2.jcc.DB2Driver"),
     ADS("ads","com.mysql.jdbc.Driver"),
     ClickHouse("clickhouse", "ru.yandex.clickhouse.ClickHouseDriver"),
-    KingbaseES("kingbasees", "com.kingbase8.Driver");
+    KingbaseES("kingbasees", "com.kingbase8.Driver"),
+    IMPALA("impala", "com.cloudera.impala.jdbc.Driver");
 
 
     private String typeName;
@@ -61,6 +62,8 @@ public enum DataBaseType {
             case RDBMS:
                 break;
             case KingbaseES:
+                break;
+            case IMPALA:
                 break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type.");
