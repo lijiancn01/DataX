@@ -559,9 +559,25 @@ public class CommonRdbmsWriter {
                 INSERT_OR_REPLACE_TEMPLATE = WriterUtil.getWriteTemplate(columns, valueHolders, writeMode, dataBaseType, forceUseUpdate);
                 writeRecordSql = String.format(INSERT_OR_REPLACE_TEMPLATE, this.table);
             }
+            if (DataBaseType.IMPALA == dataBaseType) {
+                List<String> valueHolders = new ArrayList<String>(columnNumber);
+                for (int i = 0; i < columns.size(); i++) {
+                    String type = resultSetMetaData.getRight().get(i);
+                    valueHolders.add(calImpalaValueHolder(type));
+                }
+                INSERT_OR_REPLACE_TEMPLATE = WriterUtil.getWriteTemplate(columns, valueHolders, writeMode, dataBaseType, false);
+                writeRecordSql = String.format(INSERT_OR_REPLACE_TEMPLATE, this.table);
+            }
         }
 
         protected String calcValueHolder(String columnType) {
+            return VALUE_HOLDER;
+        }
+
+        protected String calImpalaValueHolder(String columnType) {
+            if (StringUtils.equalsIgnoreCase("String", columnType)) {
+                return "CAST(? AS STRING)";
+            }
             return VALUE_HOLDER;
         }
     }

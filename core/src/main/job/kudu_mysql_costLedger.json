@@ -14,8 +14,8 @@
         "reader": {
           "name": "impalareader",
           "parameter": {
-            "username": "ua_scm_inv",
-            "password": "hWbjcNj7SYM7",
+            "username": "123456",
+            "password": "123456",
             "column": [
               "PKID",
               "CL_ITL_ID",
@@ -105,8 +105,8 @@
           "name": "mysqlwriter",
           "parameter": {
             "writeMode": "update",
-            "username": "ua_scm_inv",
-            "password": "hWbjcNj7SYM7",
+            "username": "ua_saas_report",
+            "password": "A6g1IMFZLlz5vk7Z",
             "column": [
               "CL_ID",
               "CL_ITL_ID",
@@ -187,7 +187,7 @@
             ],
             "connection": [
               {
-                "jdbcUrl": "jdbc:mysql://10.0.12.2:3306/scm_inv?useUnicode=true&characterEncoding=gbk",
+                "jdbcUrl": "jdbc:mysql://10.0.12.111:3306/saas_report?useUnicode=true&characterEncoding=gbk",
                 "table": [
                   "cost_ledger"
                 ]

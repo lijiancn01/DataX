@@ -52,6 +52,7 @@ public class ImpalaWriter extends Writer {
         @Override
         public void init() {
             this.writerSliceConfig = super.getPluginJobConf();
+            System.out.println(writerSliceConfig);
             this.commonRdbmsWriterSlave = new SubImpalaWriter.Task(DATABASE_TYPE);
             this.commonRdbmsWriterSlave.init(this.writerSliceConfig);
         }
